@@ -50,82 +50,82 @@ export default function riwayat() {
   });
 
   const input_hb = (e) => {
-    set_form({ ...form, hb: e.target.value });
+    set_form({ ...form, hb: parseInt(e.target.value) });
   };
   const input_leukosit = (e) => {
-    set_form({ ...form, leukosit: e.target.value });
+    set_form({ ...form, leukosit: parseInt(e.target.value) });
   };
   const input_led = (e) => {
-    set_form({ ...form, led: e.target.value });
+    set_form({ ...form, led: parseInt(e.target.value) });
   };
   const input_eritrosit = (e) => {
-    set_form({ ...form, eritrosit: e.target.value });
+    set_form({ ...form, eritrosit: parseInt(e.target.value) });
   };
   const input_hematrokit = (e) => {
-    set_form({ ...form, hematrokit: e.target.value });
+    set_form({ ...form, hematrokit: parseInt(e.target.value) });
   };
   const input_trombosit = (e) => {
-    set_form({ ...form, trombosit: e.target.value });
+    set_form({ ...form, trombosit: parseInt(e.target.value) });
   };
   const input_golongan_darah = (e) => {
     set_form({ ...form, golongan_darah: e.target.value });
   };
   const input_mcv = (e) => {
-    set_form({ ...form, mcv: e.target.value });
+    set_form({ ...form, mcv: parseInt(e.target.value) });
   };
   const input_mch = (e) => {
-    set_form({ ...form, mch: e.target.value });
+    set_form({ ...form, mch: parseInt(e.target.value) });
   };
   const input_mchc = (e) => {
-    set_form({ ...form, mchc: e.target.value });
+    set_form({ ...form, mchc: parseInt(e.target.value) });
   };
   const input_basofil = (e) => {
-    set_form({ ...form, basofil: e.target.value });
+    set_form({ ...form, basofil: parseInt(e.target.value) });
   };
   const input_eosinofil = (e) => {
-    set_form({ ...form, eosinofil: e.target.value });
+    set_form({ ...form, eosinofil: parseInt(e.target.value) });
   };
   const input_n_batang = (e) => {
-    set_form({ ...form, n_batang: e.target.value });
+    set_form({ ...form, n_batang: parseInt(e.target.value) });
   };
   const input_n_segmen = (e) => {
-    set_form({ ...form, n_segmen: e.target.value });
+    set_form({ ...form, n_segmen: parseInt(e.target.value) });
   };
   const input_limfosit = (e) => {
-    set_form({ ...form, limfosit: e.target.value });
+    set_form({ ...form, limfosit: parseInt(e.target.value) });
   };
   const input_monosit = (e) => {
-    set_form({ ...form, monosit: e.target.value });
+    set_form({ ...form, monosit: parseInt(e.target.value) });
   };
   const input_gula_darah_puasa = (e) => {
-    set_form({ ...form, gula_darah_puasa: e.target.value });
+    set_form({ ...form, gula_darah_puasa: parseInt(e.target.value) });
   };
   const input_total_kolesterol = (e) => {
-    set_form({ ...form, total_kolesterol: e.target.value });
+    set_form({ ...form, total_kolesterol: parseInt(e.target.value) });
   };
   const input_hdl = (e) => {
-    set_form({ ...form, hdl: e.target.value });
+    set_form({ ...form, hdl: parseInt(e.target.value) });
   };
   const input_ldl = (e) => {
-    set_form({ ...form, ldl: e.target.value });
+    set_form({ ...form, ldl: parseInt(e.target.value) });
   };
   const input_trigliserida = (e) => {
-    set_form({ ...form, trigliserida: e.target.value });
+    set_form({ ...form, trigliserida: parseInt(e.target.value) });
   };
   const input_ureum_darah = (e) => {
-    set_form({ ...form, ureum_darah: e.target.value });
+    set_form({ ...form, ureum_darah: parseInt(e.target.value) });
   };
   const input_kreatinin_darah = (e) => {
-    set_form({ ...form, kreatinin_darah: e.target.value });
+    set_form({ ...form, kreatinin_darah: parseInt(e.target.value) });
   };
   const input_asam_urat = (e) => {
-    set_form({ ...form, asam_urat: e.target.value });
+    set_form({ ...form, asam_urat: parseInt(e.target.value) });
   };
   const input_sgot = (e) => {
-    set_form({ ...form, sgot: e.target.value });
+    set_form({ ...form, sgot: parseInt(e.target.value) });
   };
   const input_sgpt = (e) => {
-    set_form({ ...form, sgpt: e.target.value });
+    set_form({ ...form, sgpt: parseInt(e.target.value) });
   };
   const input_warna = (e) => {
     set_form({ ...form, warna: e.target.value });
@@ -134,10 +134,10 @@ export default function riwayat() {
     set_form({ ...form, kekeruhan: e.target.value });
   };
   const input_berat_jenis = (e) => {
-    set_form({ ...form, berat_jenis: e.target.value });
+    set_form({ ...form, berat_jenis: parseInt(e.target.value) });
   };
   const input_ph = (e) => {
-    set_form({ ...form, ph: e.target.value });
+    set_form({ ...form, ph: parseInt(e.target.value) });
   };
   const input_leukosit_urine = (e) => {
     set_form({ ...form, leukosit_urine: e.target.value });
@@ -178,9 +178,8 @@ export default function riwayat() {
         Authorization: env.token,
       },
       data: form,
-    }).then(() => {
-      router.push("/dokter/tambah/lainnya");
     });
+    router.push("/dokter/tambah/lainnya");
   };
   return (
     <MainLayout>
